@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Free Life Insurance Quote | Protect Your Family Today</title>
+    <meta name="description" content="Get free life insurance quotes in 60 seconds. Term, whole, and universal life options available. Licensed agents ready to help.">
+    
+    <!-- Meta Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID'); // Replace with your pixel ID
+        fbq('track', 'PageView');
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_ID'); // Replace with your GA ID
+    </script>
+    
+    <!-- Google reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            font-weight: 500;
+        }
+
+        .badge svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Form Section */
+        .form-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            margin: 40px auto;
+            max-width: 600px;
+        }
+
+        .form-section h2 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .button-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .option-btn {
+            padding: 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .option-btn:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .option-btn.selected {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .consent {
+            font-size: 13px;
+            color: #666;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        .consent a {
+            color: #667eea;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .benefit {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .benefit svg {
+            width: 48px;
+            height: 48px;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .benefit h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .benefit p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-left: 10px;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Success Message */
+        .success-message {
+            background: #10b981;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .form-section {
+                padding: 25px;
+            }
+
+            .button-options {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>🛡️ Protect Your Family's Future</h1>
+            <p>Get Your Free Life Insurance Quote in 60 Seconds</p>
+            <p style="font-size: 1.1rem; margin-top: 10px;">✓ No Obligation  ✓ Licensed Agents  ✓ Best Rates</p>
+            
+            <div class="trust-badges">
+                <div class="badge">
+                    <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
+                    Licensed & Certified
+                </div>
+                <div class="badge">
+                    <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    100% Secure
+                </div>
+                <div class="badge">
+                    <svg fill="currentColor" viewBox="0 0 20 20"><path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"></path></svg>
+                    Trusted by 10,000+
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <h2>Get Your Free Quote</h2>
+            <form id="leadForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                    <div class="error-message" id="nameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                    <div class="error-message" id="phoneError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Your Age *</label>
+                    <input type="number" id="age" name="age" required min="18" max="85" placeholder="35">
+                    <div class="error-message" id="ageError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Do you currently have life insurance? *</label>
+                    <div class="button-options">
+                        <button type="button" class="option-btn" data-field="coverage" data-value="No coverage">No coverage</button>
+                        <button type="button" class="option-btn" data-field="coverage" data-value="Yes, but not enough">Not enough</button>
+                        <button type="button" class="option-btn" data-field="coverage" data-value="Yes, adequately covered">Yes, covered</button>
+                        <button type="button" class="option-btn" data-field="coverage" data-value="Not sure">Not sure</button>
+                    </div>
+                    <input type="hidden" id="coverage" name="coverage" required>
+                    <div class="error-message" id="coverageError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Do you have dependents? *</label>
+                    <div class="button-options">
+                        <button type="button" class="option-btn" data-field="dependents" data-value="Yes - spouse and children">Spouse & kids</button>
+                        <button type="button" class="option-btn" data-field="dependents" data-value="Yes - spouse only">Spouse only</button>
+                        <button type="button" class="option-btn" data-field="dependents" data-value="Yes - children only">Kids only</button>
+                        <button type="button" class="option-btn" data-field="dependents" data-value="No dependents">No dependents</button>
+                    </div>
+                    <input type="hidden" id="dependents" name="dependents" required>
+                    <div class="error-message" id="dependentsError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>When do you want coverage? *</label>
+                    <div class="button-options">
+                        <button type="button" class="option-btn" data-field="timeline" data-value="ASAP / This month">ASAP</button>
+                        <button type="button" class="option-btn" data-field="timeline" data-value="1-3 months">1-3 months</button>
+                        <button type="button" class="option-btn" data-field="timeline" data-value="3-6 months">3-6 months</button>
+                        <button type="button" class="option-btn" data-field="timeline" data-value="Just exploring options">Just browsing</button>
+                    </div>
+                    <input type="hidden" id="timeline" name="timeline" required>
+                    <div class="error-message" id="timelineError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="income">Annual Household Income *</label>
+                    <select id="income" name="income" required>
+                        <option value="">Select income range</option>
+                        <option value="Under $50k">Under $50,000</option>
+                        <option value="$50k - $100k">$50,000 - $100,000</option>
+                        <option value="$100k - $200k">$100,000 - $200,000</option>
+                        <option value="Over $200k">Over $200,000</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
+                    </select>
+                    <div class="error-message" id="incomeError"></div>
+                </div>
+
+                <div class="consent">
+                    By clicking "Get My Free Quote" you agree to be contacted by a licensed insurance agent via phone, email, or SMS (including automated calls/texts) at the number/email provided. You also agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a> and <a href="/terms" target="_blank">Terms of Service</a>. Consent is not required to purchase. Standard message/data rates may apply.
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Get My Free Quote
+                    <span class="spinner" id="spinner"></span>
+                </button>
+
+                <div class="success-message" id="successMessage">
+                    ✓ Success! We'll contact you within 2-4 hours. Check your email!
+                </div>
+            </form>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="benefits">
+            <div class="benefit">
+                <svg fill="currentColor" viewBox="0 0 20 20"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path></svg>
+                <h3>Best Rates</h3>
+                <p>We shop 20+ top-rated carriers to find you the lowest price</p>
+            </div>
+            <div class="benefit">
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+                <h3>Fast Process</h3>
+                <p>Get quotes in minutes and coverage as soon as 24 hours</p>
+            </div>
+            <div class="benefit">
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                <h3>Expert Guidance</h3>
+                <p>Licensed agents help you choose the right coverage for your family</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Button option selection
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const field = this.dataset.field;
+                const value = this.dataset.value;
+                
+                // Remove selected class from siblings
+                this.parentElement.querySelectorAll('.option-btn').forEach(b => {
+                    b.classList.remove('selected');
+                });
+                
+                // Add selected class to clicked button
+                this.classList.add('selected');
+                
+                // Update hidden input
+                document.getElementById(field).value = value;
+                
+                // Clear error
+                document.getElementById(field + 'Error').classList.remove('show');
+            });
+        });
+
+        // Phone number formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    value = `(${value}`;
+                } else if (value.length <= 6) {
+                    value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                } else {
+                    value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                }
+            }
+            e.target.value = value;
+        });
+
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Clear previous errors
+            document.querySelectorAll('.error-message').forEach(el => el.classList.remove('show'));
+            
+            // Validate all required fields
+            let isValid = true;
+            const requiredFields = ['name', 'email', 'phone', 'age', 'coverage', 'dependents', 'timeline', 'income'];
+            
+            requiredFields.forEach(field => {
+                const input = document.getElementById(field);
+                if (!input.value) {
+                    document.getElementById(field + 'Error').textContent = 'This field is required';
+                    document.getElementById(field + 'Error').classList.add('show');
+                    isValid = false;
+                }
+            });
+            
+            if (!isValid) return;
+            
+            // Disable submit button and show spinner
+            const submitBtn = document.getElementById('submitBtn');
+            const spinner = document.getElementById('spinner');
+            submitBtn.disabled = true;
+            spinner.style.display = 'inline-block';
+            
+            try {
+                // Get reCAPTCHA token
+                const recaptchaToken = await new Promise((resolve) => {
+                    grecaptcha.ready(() => {
+                        grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {action: 'submit'}).then(resolve);
+                    });
+                });
+                
+                // Get UTM parameters from URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const utm_source = urlParams.get('utm_source') || 'direct';
+                const utm_medium = urlParams.get('utm_medium') || '';
+                const utm_campaign = urlParams.get('utm_campaign') || '';
+                
+                // Prepare form data
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value.replace(/\D/g, ''),
+                    age: parseInt(document.getElementById('age').value),
+                    coverage: document.getElementById('coverage').value,
+                    dependents: document.getElementById('dependents').value,
+                    timeline: document.getElementById('timeline').value,
+                    income: document.getElementById('income').value,
+                    recaptcha_token: recaptchaToken,
+                    utm_source: utm_source,
+                    utm_medium: utm_medium,
+                    utm_campaign: utm_campaign,
+                    consent_text: "I agree to be contacted by a licensed insurance agent via phone, email, or SMS."
+                };
+                
+                // Submit to API
+                const response = await fetch('YOUR_API_URL/api/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Track conversion
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead');
+                    }
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'conversion', {
+                            'send_to': 'YOUR_GA_ID/lead_submission'
+                        });
+                    }
+                    
+                    // Show success message
+                    document.getElementById('successMessage').classList.add('show');
+                    document.getElementById('leadForm').reset();
+                    
+                    // Scroll to success message
+                    document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+                    
+                } else {
+                    alert('Something went wrong. Please try again.');
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error submitting form. Please try again.');
+            } finally {
+                submitBtn.disabled = false;
+                spinner.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
