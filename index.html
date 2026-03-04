@@ -355,60 +355,6 @@
                     <div class="error-message" id="phoneError"></div>
                 </div>
 
-                <div class="form-group">
-                    <label for="age">Your Age *</label>
-                    <input type="number" id="age" name="age" required min="18" max="85" placeholder="35">
-                    <div class="error-message" id="ageError"></div>
-                </div>
-
-                <div class="form-group">
-                    <label>Do you currently have life insurance? *</label>
-                    <div class="button-options">
-                        <button type="button" class="option-btn" data-field="coverage" data-value="No coverage">No coverage</button>
-                        <button type="button" class="option-btn" data-field="coverage" data-value="Yes, but not enough">Not enough</button>
-                        <button type="button" class="option-btn" data-field="coverage" data-value="Yes, adequately covered">Yes, covered</button>
-                        <button type="button" class="option-btn" data-field="coverage" data-value="Not sure">Not sure</button>
-                    </div>
-                    <input type="hidden" id="coverage" name="coverage" required>
-                    <div class="error-message" id="coverageError"></div>
-                </div>
-
-                <div class="form-group">
-                    <label>Do you have dependents? *</label>
-                    <div class="button-options">
-                        <button type="button" class="option-btn" data-field="dependents" data-value="Yes - spouse and children">Spouse & kids</button>
-                        <button type="button" class="option-btn" data-field="dependents" data-value="Yes - spouse only">Spouse only</button>
-                        <button type="button" class="option-btn" data-field="dependents" data-value="Yes - children only">Kids only</button>
-                        <button type="button" class="option-btn" data-field="dependents" data-value="No dependents">No dependents</button>
-                    </div>
-                    <input type="hidden" id="dependents" name="dependents" required>
-                    <div class="error-message" id="dependentsError"></div>
-                </div>
-
-                <div class="form-group">
-                    <label>When do you want coverage? *</label>
-                    <div class="button-options">
-                        <button type="button" class="option-btn" data-field="timeline" data-value="ASAP / This month">ASAP</button>
-                        <button type="button" class="option-btn" data-field="timeline" data-value="1-3 months">1-3 months</button>
-                        <button type="button" class="option-btn" data-field="timeline" data-value="3-6 months">3-6 months</button>
-                        <button type="button" class="option-btn" data-field="timeline" data-value="Just exploring options">Just browsing</button>
-                    </div>
-                    <input type="hidden" id="timeline" name="timeline" required>
-                    <div class="error-message" id="timelineError"></div>
-                </div>
-
-                <div class="form-group">
-                    <label for="income">Annual Household Income *</label>
-                    <select id="income" name="income" required>
-                        <option value="">Select income range</option>
-                        <option value="Under $50k">Under $50,000</option>
-                        <option value="$50k - $100k">$50,000 - $100,000</option>
-                        <option value="$100k - $200k">$100,000 - $200,000</option>
-                        <option value="Over $200k">Over $200,000</option>
-                        <option value="Prefer not to say">Prefer not to say</option>
-                    </select>
-                    <div class="error-message" id="incomeError"></div>
-                </div>
 
                 <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.2);">
     <p style="font-size: 0.85rem; color: #fff; margin: 0; line-height: 1.6; text-align: left;">
@@ -494,7 +440,7 @@
             
             // Validate all required fields
             let isValid = true;
-            const requiredFields = ['name', 'email', 'phone', 'age', 'coverage', 'dependents', 'timeline', 'income'];
+           const requiredFields = ['name', 'email', 'phone'];
             
             requiredFields.forEach(field => {
                 const input = document.getElementById(field);
